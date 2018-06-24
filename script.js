@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var apiRoot = 'http://evening-badlands-68335.herokuapp.com/v1/task/';
+  var apiRoot = 'https://evening-badlands-68335.herokuapp.com/v1/task/';
   var datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   var tasksContainer = $('[data-tasks-container]');
 
@@ -33,12 +33,7 @@ $(document).ready(function() {
     $.ajax({
       url: requestUrl,
       method: 'GET',
-      success: handleDatatableRender,
-      complete: function(data) {
-        if(data.status === 200) {
-          
-        }
-      }
+      success: handleDatatableRender
     });
   }
 
