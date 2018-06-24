@@ -33,7 +33,12 @@ $(document).ready(function() {
     $.ajax({
       url: requestUrl,
       method: 'GET',
-      success: handleDatatableRender
+      success: handleDatatableRender,
+      complete: function(data) {
+        if(data.status === 200) {
+          
+        }
+      }
     });
   }
 
